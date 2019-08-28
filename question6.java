@@ -1,28 +1,19 @@
 public class question6
 {
-    private long sumOfSquares()
-    {
-        long total = 0;
-        for ( int i = 1; i < 101; i++)
+    public static void main(String args[])
+   {
+        int n=100;
+        int sumOfSquare=0;
+        int squareOfSum=0;
+        int Sum=0;
+
+        for(int i=1;i<=n;i++)
         {
-            total += i*i;
+            sumOfSquare+=i*i;
+            Sum+=i;
         }
-
-        return total;
-    }
-
-    private long squareOfSums()
-    {
-        long total = 0;
-        for ( int i = 1; i < 101; i++ )
-        {
-            total += i;
-        }
-        return total*total;
-    }
-
-    public long answer()
-    {
-        return squareOfSums() - sumOfSquares();
+        squareOfSum=Sum*Sum;
+        
+        System.out.println(java.lang.Math.abs(squareOfSum-sumOfSquare));
     }
 }

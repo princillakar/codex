@@ -1,24 +1,23 @@
 public class question5 {
-	long s = 21;
+	static int smallestMultiple(int number1, int lastnumber){
+		int lcm = number1;
+		for (int i=2; i<=lastnumber ;i++) {
+			int number2 = i;
+			lcm = (number1 > number2) ? number1 :number2;
+
+			while (true) {
+				if (lcm % number1 == 0 && lcm % number2 == 0) {
+					number1 = lcm;
+					break;
+				}
+				++lcm;
+			}
+		}
+		return lcm;
+	}
+	public static void main(String agrs[])
 	{
-	while (1==1) {
-	    boolean all = true;
-	    for (int i = 1; i < 21; i++)
-	    {
-	        all = true;
-	        if ( s % i != 0 )
-	        {
-	            all = false;
-	            break;
-	        }
-	    }
-	    if ( all )
-	    {
-	        System.out.println( "smallest positive number ="+s );
-	        System.exit(0);
-	    }
-
-	    s++;
+		System.out.println(smallestMultiple(1,20));
 	}
-
-	}
+}
+	

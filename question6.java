@@ -1,19 +1,15 @@
 public class question6
 {
-    public static void main(String args[])
-   {
-        int n=100;
-        int sumOfSquare=0;
-        int squareOfSum=0;
-        int Sum=0;
+    public static void main(String args[]) {
 
-        for(int i=1;i<=n;i++)
-        {
-            sumOfSquare+=i*i;
-            Sum+=i;
-        }
-        squareOfSum=Sum*Sum;
-        
-        System.out.println(java.lang.Math.abs(squareOfSum-sumOfSquare));
-    }
+	 int N = 100;
+	
+		int sum = 0;
+		int sum2 = 0;
+		for (int i = 1; i <= N; i++) {
+			sum += i;
+			sum2 += i * i;
+		}
+		System.out.println(sum * sum - sum2);
+	} 
 }

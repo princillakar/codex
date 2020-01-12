@@ -1,18 +1,19 @@
 public class question10 {
 
-	  public static void main(String args[])
+	public static void main(String args[])
     {
         long sum=0;
-        for(long i=0;i<=2000000;i++)
+        for(long i=3;i<=2000000;i+=2)
         {
             if(isPrime(i))
+
                 sum=sum+i;
         }
-        System.out.println(sum);
+        System.out.println(sum+2);
     }
 	 static boolean isPrime(long i) {
-	        if (i <= 1)
-	            return false;
+		 if (i <= 1)
+	            return false ;
 	        if (i <= 3)
 	            return true;
 	        if (i % 2 == 0 || i % 3 == 0)
@@ -26,3 +27,4 @@ public class question10 {
 	    }
 	    
 	    }
+                           //142913828922
